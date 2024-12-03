@@ -61,8 +61,14 @@ img{
     border-color: #fff;
   }
 
+  .section-header {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
 .navbar{
-    background-color: black;
     color: white;
     position: fixed;
     top: 0;
@@ -71,6 +77,12 @@ img{
     padding: 1rem;
     z-index: 1000;
     transition: background-color 0.3s ease;
+}
+
+.navbar.navbar-scroll{
+    background-color: rgb(235, 77, 85, 0.8);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .navbar-flex{
@@ -180,6 +192,50 @@ img{
     height: 100px;
   }
 
+  /*Topics*/
+  
+
+  .section-header h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .section-header p{
+    font-size: 1.3rem;
+    color: var(--dark-color);
+  }
+
+  .heading-border{
+    width: 64px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 0 auto 2rem;
+  }
+
+  .topics{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .topic img {
+    transition: transform 0.3s;
+  }
+  
+  .topic img:hover {
+    transform: scale(1.1);
+  }
+  
+  .topic h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+  }
+
+
+
 
 
 /*Media Quiries*/
@@ -197,6 +253,10 @@ img{
     .hero img{
         max-width: 500px;
         margin-right: 0;
+    }
+
+    .topics{
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
@@ -231,6 +291,10 @@ img{
         max-width: 600px;
         margin-right: 0;
     }
+
+    .topics{
+        grid-template-columns: repeat(2, 1fr);
+    }
     
 }
 
@@ -258,7 +322,7 @@ img{
     }
 
     .hero img{
-        max-width: 300px;
+        max-width: 250px;
         margin-right: 0;
     }
     
@@ -276,7 +340,11 @@ img{
     }
 
     .hero img{
-        max-width: 350px;
+        max-width: 300px;
+    }
+
+    .topics{
+        grid-template-columns: 1fr;
     }
 
 }
