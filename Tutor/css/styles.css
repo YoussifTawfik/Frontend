@@ -44,6 +44,10 @@ img{
     padding: 0 2rem;
 }
 
+.section {
+    margin: 4rem 0;
+  }
+
 .btn {
     display: inline-block;
     padding: 1.3rem 2.3rem;
@@ -193,8 +197,6 @@ img{
   }
 
   /*Topics*/
-  
-
   .section-header h2{
     font-size: 2rem;
     font-weight: 700;
@@ -234,12 +236,74 @@ img{
     margin: 0.5rem 0;
   }
 
+  /* Chapters */
+  .chapters-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 0 4rem;
+  }
 
+  .chapters-cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgb(0, 0, 0, 0.2);
+    background: white;
+    gap: 2rem;
+    padding: 2rem;
+  }
 
+  .chapters-cards img{
+    max-width: 130px;
+    margin: 1rem auto;
+    padding: 2rem auto;
+  }
+
+  .chapters-cards h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.3rem 0;
+  }
+
+  .chapters-cards p{
+    margin-top: -1rem;
+  }
+  
+
+  /* Summary */
+.summary {
+    background: var(--light-color);
+    color: var(--dark-color);
+    padding: 4rem 2rem 5rem;
+  }
+  
+  .summary .section-lists {
+    background: #fff;
+    padding: 2rem;
+  }
+  
+  .summary .list-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+  
+  .summary .list-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid #f1f4f6;
+  }
+  
+  .summary .list-item:last-child {
+    border-bottom: none;
+  }
 
 
 /*Media Quiries*/
-
 @media(max-width: 1200px){
 
     .hero .hero-flex{
@@ -325,6 +389,10 @@ img{
         max-width: 250px;
         margin-right: 0;
     }
+
+    .chapters-cards{
+        grid-template-columns: 1fr;
+    }
     
 }
 
@@ -346,5 +414,18 @@ img{
     .topics{
         grid-template-columns: 1fr;
     }
+
+    .summary .container{
+        padding: 0;
+    }
+
+    .summary .list-item {
+        padding: 1rem 0;
+      }
+
+      .summary .list-header{
+        text-align: center;
+        font-size: 1.1rem;
+      }
 
 }
