@@ -303,6 +303,47 @@ img{
   }
 
 
+  /* info */
+  .info-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-content{
+    padding: 3rem;
+    background-color: var(--primary-color);
+  }
+
+  .info-left{
+    background: url('../images/audience.jpg') top center/cover no-repeat;
+  }
+
+  .info-content h2{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-content p{
+    color: white;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 5px;
+  }
+
+  .info-content li{
+    color: white;
+    padding: 3px;
+  }
+
+  .info-content i{
+    padding-right: .4rem;
+    color: var(--secondary-color);
+  }
+
+
 /*Media Quiries*/
 @media(max-width: 1200px){
 
@@ -426,6 +467,15 @@ img{
       .summary .list-header{
         text-align: center;
         font-size: 1.1rem;
+      }
+
+      .info-container{
+        grid-template-columns: 1fr;
+      }
+
+      .info-content h2{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
       }
 
 }
