@@ -44,6 +44,10 @@ img{
     padding: 0 2rem;
 }
 
+.section {
+    margin: 4rem 0;
+  }
+
 .btn {
     display: inline-block;
     padding: 1.3rem 2.3rem;
@@ -59,6 +63,17 @@ img{
     background: var(--primary-color);
     color: #fff;
     border-color: #fff;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.75rem;
+    background: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
   }
 
   .section-header {
@@ -193,8 +208,6 @@ img{
   }
 
   /*Topics*/
-  
-
   .section-header h2{
     font-size: 2rem;
     font-weight: 700;
@@ -234,12 +247,133 @@ img{
     margin: 0.5rem 0;
   }
 
+  /* Chapters */
+  .chapters-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 0 4rem;
+  }
+
+  .chapters-cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgb(0, 0, 0, 0.2);
+    background: white;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .chapters-cards img{
+    max-width: 130px;
+    margin: 1rem auto;
+    padding: 2rem auto;
+  }
+
+  .chapters-cards h3{
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.3rem 0;
+  }
+
+  .chapters-cards p{
+    margin-top: -1rem;
+  }
+  
+
+  /* Summary */
+.summary {
+    background: var(--light-color);
+    color: var(--dark-color);
+    padding: 4rem 2rem 5rem;
+  }
+  
+  .summary .section-lists {
+    background: #fff;
+    padding: 2rem;
+  }
+  
+  .summary .list-header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+  
+  .summary .list-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid #f1f4f6;
+  }
+  
+  .summary .list-item:last-child {
+    border-bottom: none;
+  }
 
 
+  /* info */
+  .info-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-content{
+    padding: 3rem;
+    background-color: var(--primary-color);
+  }
+
+  .info-left{
+    background: url('../images/audience.jpg') top center/cover no-repeat;
+  }
+
+  .info-content h2{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-content p{
+    color: white;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding: 5px;
+  }
+
+  .info-content li{
+    color: white;
+    padding: 3px;
+  }
+
+  .info-content i{
+    padding-right: .4rem;
+    color: var(--secondary-color);
+  }
+
+  /* Takeaways */
+  .takeaways-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .takeaways-cards .card{
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .takeaways-cards .card i{
+    color: var(--primary-color);
+    margin-right: 1rem;
+  }
 
 
 /*Media Quiries*/
-
 @media(max-width: 1200px){
 
     .hero .hero-flex{
@@ -295,6 +429,10 @@ img{
     .topics{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .takeaways-cards{
+      grid-template-columns: 1fr;
+    }
     
 }
 
@@ -325,6 +463,10 @@ img{
         max-width: 250px;
         margin-right: 0;
     }
+
+    .chapters-cards{
+        grid-template-columns: 1fr;
+    }
     
 }
 
@@ -346,5 +488,27 @@ img{
     .topics{
         grid-template-columns: 1fr;
     }
+
+    .summary .container{
+        padding: 0;
+    }
+
+    .summary .list-item {
+        padding: 1rem 0;
+      }
+
+      .summary .list-header{
+        text-align: center;
+        font-size: 1.1rem;
+      }
+
+      .info-container{
+        grid-template-columns: 1fr;
+      }
+
+      .info-content h2{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
 
 }
